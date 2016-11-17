@@ -1,0 +1,32 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+from math import *
+ 
+def conv(liczba, z, do):    #konwertuje najpierw liczbê na system dziesiêtny,
+dec=0                   #potem na docelowy
+val="0123456789abcdefghijklmnoprstuwvxyz"
+for V in liczba:        #du¿e V - znak
+dec*=z              #przemno¿enie aktualnej wartoœci liczby dziesiêtnej
+#przez podstawê systemu Ÿród³owego
+v=0                 #ma³e v - wartoœæ liczbowa danego znaku
+while V!=val[v]:    #szukanie w tablicy `val tej wartoœci
+v+=1
+dec+=v
+#w tym miejscu mamy ju¿ liczbê w systemie dziesiêtnym
+#teraz zamiana na docelowy
+liczba="" #Ÿród³owy tekst nam ju¿ nie jest potrzebny, wiêc czyœcimy
+while dec>0:
+v=dec%do                    #wartoœæ liczbowa danego znaku w
+#docelowym systemie
+liczba=str(val[v])+liczba   #na pocz¹tek stringu wstawia
+#wartoœæ w docelowym systemie
+dec/=do
+return liczba
+ 
+print "wprowadŸ liczbê: "
+liczba=raw_input()
+print "Z systemu: "
+z=input()
+print "Na system: "
+do=input()
+print "Wynik: "+conv(liczba, z, do)
