@@ -1,3 +1,7 @@
+
+
+
+nowa linia master
 import pygame
 import random
 
