@@ -1,3 +1,6 @@
+
+
+nowa linia master
 with Ada.Command_Line; use Ada.Command_Line;
 with Gnat.Io; use Gnat.Io;
 
