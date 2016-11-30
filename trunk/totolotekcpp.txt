@@ -1,3 +1,4 @@
+//dodatkowa linia
 //Lotto generator du¿y lotek C++
 #include <iostream>
 using namespace std;
