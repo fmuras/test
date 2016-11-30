@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 
 
 
 nowa linia master
+=======
+//dodatkowa linia
+>>>>>>> remotes/origin/branch
 //Lotto generator du¿y lotek C++
 #include <iostream>
 using namespace std;

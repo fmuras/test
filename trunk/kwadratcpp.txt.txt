@@ -1,7 +1,11 @@
 
+<<<<<<< HEAD
 
 
 nowa linia master
+=======
+/*dodatkowa linia*/
+>>>>>>> remotes/origin/branch
     #include <cstdlib>
     #include <iostream>
      

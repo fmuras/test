@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 
 
 
 nowa linia master
+=======
+/*dodatkowa linia*/ 
+>>>>>>> remotes/origin/branch
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>

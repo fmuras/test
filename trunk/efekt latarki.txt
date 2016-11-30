@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 
 
 
 nowa linia master
+=======
+dodatkowa linia
+>>>>>>> remotes/origin/branch
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <HTML>
 <HEAD>

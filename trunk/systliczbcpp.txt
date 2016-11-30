@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 
 
 
 nowa linia master
+=======
+dodatkowa linia
+>>>>>>> remotes/origin/branch
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 from math import *
