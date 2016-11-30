@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+  <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=iso-8859-2">
+  <META NAME="Author" CONTENT="Sławomir Kokłowski">
+  <META HTTP-EQUIV="Content-Language" CONTENT="pl">
+  <TITLE>Efekt latarki</TITLE>
+<SCRIPT TYPE="text/jscript" LANGUAGE="JScript">
+<!--
+
+
+var statusbar = "Kliknij, aby zmienić kolor wiatła";
+
+var przegladarka = navigator.userAgent;
+var ie_ver = 0;
+if (przegladarka.indexOf("MSIE") != -1 && przegladarka.indexOf(") ") == -1)
+{
+  ie_ver = parseInt(przegladarka.substring(przegladarka.indexOf("MSIE")+4));
+  if (isNaN(ie_ver)) ie_ver = parseInt(przegladarka.substring(przegladarka.indexOf("MSIE")+5));
+}
+
+function lightStart()
+{
+  if (ie_ver >= 4)
+  {
+    document.body.style.filter = "Light";
+    // wiatło punktowe:
+    // obiekt.addPoint(x,y,z, R,G,B, natężenie);
+    document.body.filters.Light.addPoint(300,150,150, Math.floor(Math.random()*100)+155,Math.floor(Math.random()*100)+155,Math.floor(Math.random()*100)+155, 100);
+    window.defaultStatus = statusbar;
+  }
+}
+
+function lightMove()
+{
+  if (ie_ver >= 4 && document.body.filters.Light)
+  {
+    // Przemieszczanie wiatła:
+    // obiekt.MoveLight(nr, x,y,z, 1);
+    document.body.filters.Light.MoveLight(0, window.event.x,window.event.y,150, 1);
+  }
+}
+
+function lightChange()
+{
+  if (ie_ver >= 4 && document.body.filters.Light)
+  {
+    // Zmiana koloru wiatła:
+    // obiekt.ChangeColor(nr, R,G,B, 1);
+    document.body.filters.Light.ChangeColor(0, Math.floor(Math.random()*100)+155,Math.floor(Math.random()*100)+155,Math.floor(Math.random()*100)+155, 1);
+    // Zmiana natężenia wiatła:
+    // obiekt.ChangeStrength(nr, natężenie, 1);
+  }
+}
+
+function lightOnoff()
+{
+  if (ie_ver >= 4 && document.body.filters.Light)
+  {
+    if (document.body.filters.item(0).enabled)
+    {
+      document.body.filters.item(0).enabled = false;
+      window.defaultStatus = '';
+    }
+    else
+    {
+      document.body.filters.item(0).enabled = true;
+      window.defaultStatus = statusbar;
+    }
+  }
+}
+//-->
+</SCRIPT>
+</HEAD>
+<BODY onmousemove="lightMove()" onclick="lightChange()" onunload="window.defaultStatus=''" style="cursor: crosshair">
+<SCRIPT TYPE="text/jscript" LANGUAGE="JScript">
+<!--
+lightStart();
+//-->
+</SCRIPT>
+
+<SCRIPT TYPE="text/jscript" LANGUAGE="JScript">
+<!--
+if (ie_ver >= 4) document.write('<a href="javascript:void(null)" onclick="lightOnoff(); return false" onmouseover="window.status=\'Wyłšcz/Włšcz efekt\'; return true" onmouseout="window.status=\'\'; return true">Wyłšcz/Włšcz efekt</a>');
+//-->
+</SCRIPT>
+
+To jest właciwa treć strony
+
+</BODY>
+</HTML>
