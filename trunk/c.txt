@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-
+aaaaaaaa
 
 
 nowa linia master
