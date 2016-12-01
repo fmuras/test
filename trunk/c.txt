@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 aaaaaaaa
 
-
+aaaaaaaa
 nowa linia master
 =======
 /*dodatkowa linia*/ 
